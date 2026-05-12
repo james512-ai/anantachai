@@ -6,6 +6,7 @@
   <title>Anantachai | Portfolio</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -14,7 +15,7 @@
     }
 
     body{
-      font-family: "Poppins", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background:#ffffff;
       color:#222;
       line-height:1.7;
@@ -31,7 +32,7 @@
     }
 
     h1,h2,h3{
-      color:#5b21b6;
+      color:#6d28d9;
     }
 
     p{
@@ -39,6 +40,7 @@
     }
 
     /* NAVBAR */
+
     header{
       width:100%;
       position:fixed;
@@ -58,8 +60,8 @@
 
     .logo{
       font-size:24px;
-      font-weight:700;
-      color:#5b21b6;
+      font-weight:bold;
+      color:#6d28d9;
     }
 
     nav ul{
@@ -80,6 +82,7 @@
     }
 
     /* HERO */
+
     .hero{
       min-height:100vh;
       display:flex;
@@ -91,7 +94,7 @@
     .hero-content{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:50px;
+      gap:60px;
       align-items:center;
     }
 
@@ -103,14 +106,14 @@
 
     .hero-text h3{
       font-size:22px;
-      font-weight:500;
-      margin-bottom:25px;
       color:#7c3aed;
+      margin-bottom:20px;
+      font-weight:500;
     }
 
     .hero-text p{
-      margin-bottom:30px;
       font-size:17px;
+      margin-bottom:30px;
       max-width:500px;
     }
 
@@ -121,8 +124,8 @@
       color:white;
       text-decoration:none;
       border-radius:10px;
+      font-weight:bold;
       transition:0.3s;
-      font-weight:600;
     }
 
     .btn:hover{
@@ -130,13 +133,23 @@
       transform:translateY(-3px);
     }
 
+    .hero-image{
+      display:flex;
+      justify-content:center;
+    }
+
     .hero-image img{
       width:100%;
-      border-radius:24px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+      max-width:420px;
+      height:520px;
+      object-fit:cover;
+      border-radius:28px;
+      box-shadow:0 15px 35px rgba(124,58,237,0.18);
+      border:6px solid white;
     }
 
     /* SECTION TITLE */
+
     .section-title{
       text-align:center;
       margin-bottom:60px;
@@ -148,6 +161,7 @@
     }
 
     /* ABOUT */
+
     .about{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -157,16 +171,16 @@
 
     .about img{
       width:100%;
-      border-radius:20px;
+      border-radius:24px;
       box-shadow:0 8px 25px rgba(0,0,0,0.08);
     }
 
     .about-text p{
       margin-bottom:20px;
-      font-size:16px;
     }
 
     /* PROJECTS */
+
     .projects-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -200,6 +214,7 @@
     }
 
     /* SKILLS */
+
     .skills{
       max-width:800px;
       margin:auto;
@@ -213,7 +228,7 @@
       display:flex;
       justify-content:space-between;
       margin-bottom:8px;
-      font-weight:600;
+      font-weight:bold;
     }
 
     .skill-bar{
@@ -231,6 +246,7 @@
     }
 
     /* CONTACT */
+
     .contact-box{
       max-width:700px;
       margin:auto;
@@ -248,10 +264,11 @@
     .contact-box a{
       color:#7c3aed;
       text-decoration:none;
-      font-weight:600;
+      font-weight:bold;
     }
 
     /* FOOTER */
+
     footer{
       text-align:center;
       padding:30px 0;
@@ -260,11 +277,21 @@
     }
 
     /* RESPONSIVE */
+
     @media(max-width:900px){
 
       .hero-content,
       .about{
         grid-template-columns:1fr;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero-text p{
+        margin:auto;
+        margin-bottom:30px;
       }
 
       .hero-text h1{
@@ -283,9 +310,12 @@
 <body>
 
   <!-- HEADER -->
+
   <header>
     <div class="container">
+
       <nav>
+
         <div class="logo">Anantachai</div>
 
         <ul>
@@ -294,17 +324,22 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
       </nav>
+
     </div>
   </header>
 
   <!-- HERO -->
+
   <section class="hero">
+
     <div class="container">
 
       <div class="hero-content">
 
         <div class="hero-text">
+
           <h1>Anantachai</h1>
 
           <h3>
@@ -312,25 +347,33 @@
           </h3>
 
           <p>
-            Third-year Logistics student with an interest in supply chain management,
-            warehouse systems, and digital logistics solutions. Passionate about
-            creating organized systems and improving operational efficiency.
+            Third-year Logistics student passionate about supply chain management,
+            warehouse systems, and logistics technology. Interested in creating
+            efficient systems and improving operational performance.
           </p>
 
-          <a href="#projects" class="btn">View Projects</a>
+          <a href="#projects" class="btn">
+            View Projects
+          </a>
+
         </div>
 
+        <!-- PROFILE IMAGE -->
+
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="profile">
+          <img src="S__17326088.jpg" alt="Anantachai Profile">
         </div>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- ABOUT -->
+
   <section id="about">
+
     <div class="container">
 
       <div class="section-title">
@@ -339,27 +382,25 @@
 
       <div class="about">
 
-        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="about">
+        <img src="photo 1.jpg" alt="About">
 
         <div class="about-text">
 
           <p>
-            I am a third-year Logistics student who enjoys learning about
-            transportation systems, warehouse management, and modern supply chain
-            technology. I am especially interested in how logistics can improve
-            customer experiences and business performance.
+            I am currently a third-year Logistics student with a strong interest
+            in supply chain management, warehouse operations, and transportation systems.
+            I enjoy learning how logistics technology can improve efficiency and customer experience.
           </p>
 
           <p>
-            During my studies, I have explored dashboard design, warehouse management
-            systems, and shipment tracking solutions. I enjoy combining analytical
-            thinking with creativity to solve operational challenges.
+            Throughout my studies, I have worked on logistics dashboards,
+            delivery tracking concepts, and warehouse management analysis.
+            I enjoy combining creativity with analytical thinking to solve problems effectively.
           </p>
 
           <p>
-            My goal is to grow into a logistics professional who can contribute
-            innovative ideas and efficient solutions in the logistics and supply
-            chain industry.
+            My goal is to become a logistics professional who can contribute
+            innovative ideas and operational solutions in the logistics industry.
           </p>
 
         </div>
@@ -367,10 +408,13 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- PROJECTS -->
+
   <section id="projects">
+
     <div class="container">
 
       <div class="section-title">
@@ -379,52 +423,73 @@
 
       <div class="projects-grid">
 
+        <!-- PROJECT 1 -->
+
         <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <img src="photo 1.jpg" alt="Project 1">
 
           <div class="project-content">
+
             <h3>Logistics Tracking Dashboard</h3>
 
             <p>
-              Designed a shipment tracking dashboard concept for monitoring fleet
-              movement, delivery status, and logistics performance in real time.
+              Designed a shipment tracking dashboard concept for monitoring
+              logistics operations, fleet movement, and delivery performance in real time.
             </p>
+
           </div>
+
         </div>
 
+        <!-- PROJECT 2 -->
+
         <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <img src="photo 2.jpg" alt="Project 2">
 
           <div class="project-content">
+
             <h3>Delivery Mobile Interface</h3>
 
             <p>
-              Created a delivery application interface focused on route tracking,
-              customer convenience, and faster communication between drivers and users.
+              Developed a delivery application interface focused on customer convenience,
+              shipment tracking, and route optimization.
             </p>
+
           </div>
+
         </div>
 
+        <!-- PROJECT 3 -->
+
         <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <img src="photo 3.jpg" alt="Project 3">
 
           <div class="project-content">
-            <h3>Warehouse Management Analysis</h3>
+
+            <h3>Warehouse Management System</h3>
 
             <p>
-              Developed a warehouse management presentation analyzing operational
-              efficiency, inventory flow, and workforce productivity.
+              Created a warehouse management analysis project presenting inventory flow,
+              workforce efficiency, and operational performance insights.
             </p>
+
           </div>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- SKILLS -->
+
   <section id="skills">
+
     <div class="container">
 
       <div class="section-title">
@@ -502,10 +567,13 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- CONTACT -->
+
   <section id="contact">
+
     <div class="container">
 
       <div class="section-title">
@@ -529,9 +597,11 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- FOOTER -->
+
   <footer>
     <p>© 2026 Anantachai Portfolio. All Rights Reserved.</p>
   </footer>
