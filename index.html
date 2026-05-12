@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anantachai | Portfolio</title>
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -15,10 +14,20 @@
     }
 
     body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:#ffffff;
+      font-family: "Poppins", sans-serif;
+      background:#fafafa;
       color:#222;
       line-height:1.7;
+    }
+
+    :root{
+      --purple:#7c4dff;
+      --light-purple:#f3edff;
+      --orange:#ff8a3d;
+      --light-orange:#fff3eb;
+      --dark:#222;
+      --gray:#666;
+      --white:#fff;
     }
 
     .container{
@@ -28,109 +37,116 @@
     }
 
     section{
-      padding:90px 0;
+      padding:80px 0;
     }
 
     h1,h2,h3{
-      color:#6d28d9;
+      font-weight:700;
+    }
+
+    h2{
+      font-size:2rem;
+      margin-bottom:30px;
+      color:var(--purple);
     }
 
     p{
-      color:#555;
+      color:var(--gray);
     }
 
     /* NAVBAR */
-
-    header{
+    nav{
       width:100%;
+      background:rgba(255,255,255,0.95);
       position:fixed;
       top:0;
       left:0;
-      background:white;
-      border-bottom:1px solid #eee;
       z-index:1000;
+      border-bottom:1px solid #eee;
     }
 
-    nav{
+    .nav-content{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 0;
+      padding:18px 0;
     }
 
     .logo{
-      font-size:24px;
-      font-weight:bold;
-      color:#6d28d9;
+      font-size:1.3rem;
+      font-weight:700;
+      color:var(--purple);
     }
 
     nav ul{
       display:flex;
-      gap:25px;
+      gap:30px;
       list-style:none;
     }
 
-    nav ul li a{
+    nav a{
       text-decoration:none;
       color:#333;
       font-weight:500;
       transition:0.3s;
     }
 
-    nav ul li a:hover{
-      color:#7c3aed;
+    nav a:hover{
+      color:var(--orange);
     }
 
     /* HERO */
-
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
-      background:linear-gradient(to bottom right,#ffffff,#f3e8ff);
-      padding-top:100px;
+      background:linear-gradient(to right,var(--light-purple),var(--light-orange));
+      padding-top:80px;
     }
 
     .hero-content{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:60px;
       align-items:center;
+      gap:60px;
     }
 
     .hero-text h1{
-      font-size:64px;
+      font-size:4rem;
       line-height:1.1;
+      color:var(--dark);
       margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:var(--purple);
     }
 
     .hero-text h3{
-      font-size:22px;
-      color:#7c3aed;
-      margin-bottom:20px;
+      color:var(--orange);
       font-weight:500;
+      margin-bottom:25px;
     }
 
     .hero-text p{
-      font-size:17px;
-      margin-bottom:30px;
       max-width:500px;
+      margin-bottom:35px;
     }
 
     .btn{
       display:inline-block;
-      padding:14px 30px;
-      background:#7c3aed;
+      padding:14px 32px;
+      background:var(--purple);
       color:white;
       text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
+      border-radius:40px;
       transition:0.3s;
+      font-weight:600;
     }
 
     .btn:hover{
-      background:#5b21b6;
-      transform:translateY(-3px);
+      background:var(--orange);
+      transform:translateY(-2px);
     }
 
     .hero-image{
@@ -139,40 +155,30 @@
     }
 
     .hero-image img{
-      width:100%;
-      max-width:420px;
-      height:520px;
+      width:350px;
+      height:450px;
       object-fit:cover;
-      border-radius:28px;
-      box-shadow:0 15px 35px rgba(124,58,237,0.18);
+      border-radius:30px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
       border:6px solid white;
     }
 
-    /* SECTION TITLE */
-
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-
-    .section-title h2{
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
     /* ABOUT */
-
     .about{
+      background:white;
+    }
+
+    .about-content{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:50px;
       align-items:center;
     }
 
-    .about img{
+    .about-image img{
       width:100%;
-      border-radius:24px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      border-radius:25px;
+      box-shadow:0 15px 30px rgba(0,0,0,0.1);
     }
 
     .about-text p{
@@ -180,8 +186,11 @@
     }
 
     /* PROJECTS */
+    .projects{
+      background:#faf7ff;
+    }
 
-    .projects-grid{
+    .project-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:30px;
@@ -189,14 +198,14 @@
 
     .project-card{
       background:white;
-      border-radius:20px;
+      border-radius:25px;
       overflow:hidden;
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
       transition:0.3s;
     }
 
     .project-card:hover{
-      transform:translateY(-6px);
+      transform:translateY(-8px);
     }
 
     .project-card img{
@@ -205,103 +214,137 @@
       object-fit:cover;
     }
 
-    .project-content{
+    .project-info{
       padding:25px;
     }
 
-    .project-content h3{
-      margin-bottom:12px;
+    .project-info h3{
+      margin-bottom:10px;
+      color:var(--purple);
     }
 
     /* SKILLS */
-
     .skills{
-      max-width:800px;
-      margin:auto;
+      background:white;
+    }
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+      gap:30px;
     }
 
     .skill{
-      margin-bottom:28px;
+      margin-bottom:25px;
     }
 
     .skill-title{
       display:flex;
       justify-content:space-between;
-      margin-bottom:8px;
-      font-weight:bold;
+      margin-bottom:10px;
+      font-weight:600;
     }
 
     .skill-bar{
       width:100%;
       height:12px;
       background:#eee;
-      border-radius:20px;
+      border-radius:50px;
       overflow:hidden;
     }
 
     .skill-fill{
       height:100%;
-      background:linear-gradient(to right,#7c3aed,#c084fc);
-      border-radius:20px;
+      border-radius:50px;
+      background:linear-gradient(90deg,var(--purple),var(--orange));
     }
 
     /* CONTACT */
-
-    .contact-box{
-      max-width:700px;
-      margin:auto;
-      background:#faf5ff;
-      padding:50px;
-      border-radius:24px;
+    .contact{
+      background:linear-gradient(to right,var(--purple),var(--orange));
+      color:white;
       text-align:center;
     }
 
-    .contact-box p{
+    .contact h2{
+      color:white;
+    }
+
+    .contact p{
+      color:white;
       margin-bottom:15px;
-      font-size:18px;
     }
 
-    .contact-box a{
-      color:#7c3aed;
+    .contact-links{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .contact-links a{
       text-decoration:none;
-      font-weight:bold;
+      background:white;
+      color:var(--purple);
+      padding:14px 24px;
+      border-radius:40px;
+      font-weight:600;
+      transition:0.3s;
     }
 
-    /* FOOTER */
+    .contact-links a:hover{
+      background:#222;
+      color:white;
+    }
 
     footer{
+      background:#111;
+      color:#bbb;
       text-align:center;
-      padding:30px 0;
-      border-top:1px solid #eee;
-      color:#777;
+      padding:20px;
+      font-size:0.9rem;
     }
-
-    /* RESPONSIVE */
 
     @media(max-width:900px){
 
       .hero-content,
-      .about{
+      .about-content{
         grid-template-columns:1fr;
-      }
-
-      .hero-text{
         text-align:center;
       }
 
       .hero-text p{
-        margin:auto;
-        margin-bottom:30px;
+        margin:auto auto 30px;
       }
 
       .hero-text h1{
-        font-size:48px;
+        font-size:3rem;
+      }
+
+      .skills-grid{
+        grid-template-columns:1fr;
       }
 
       nav ul{
         gap:15px;
       }
+    }
 
+    @media(max-width:600px){
+
+      .hero-text h1{
+        font-size:2.3rem;
+      }
+
+      .hero-image img{
+        width:280px;
+        height:360px;
+      }
+
+      h2{
+        font-size:1.7rem;
+      }
     }
 
   </style>
@@ -309,301 +352,260 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Anantachai</div>
 
-  <header>
-    <div class="container">
-
-      <nav>
-
-        <div class="logo">Anantachai</div>
-
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-      </nav>
-
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
-
   <section class="hero">
+    <div class="container hero-content">
 
-    <div class="container">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Anantachai</span></h1>
 
-      <div class="hero-content">
+        <h3>
+          Marketing student passionate about brand storytelling
+        </h3>
 
-        <div class="hero-text">
+        <p>
+          Third-year Logistics student with a passion for creative business,
+          branding, and supply chain innovation. I enjoy designing experiences,
+          managing operations, and creating impactful presentations that connect
+          people and brands together.
+        </p>
 
-          <h1>Anantachai</h1>
+        <a href="#projects" class="btn">View My Projects</a>
+      </div>
 
-          <h3>
-            Marketing student passionate about brand storytelling
-          </h3>
-
-          <p>
-            Third-year Logistics student passionate about supply chain management,
-            warehouse systems, and logistics technology. Interested in creating
-            efficient systems and improving operational performance.
-          </p>
-
-          <a href="#projects" class="btn">
-            View Projects
-          </a>
-
-        </div>
-
-        <!-- PROFILE IMAGE -->
-
-        <div class="hero-image">
-          <img src="S__17326088.jpg" alt="Anantachai Profile">
-        </div>
-
+      <div class="hero-image">
+        <img src="S__17326088.jpg" alt="Anantachai">
       </div>
 
     </div>
-
   </section>
 
   <!-- ABOUT -->
-
-  <section id="about">
-
+  <section class="about" id="about">
     <div class="container">
 
-      <div class="section-title">
-        <h2>About Me</h2>
-      </div>
+      <h2>About Me</h2>
 
-      <div class="about">
+      <div class="about-content">
 
-        <img src="photo 1.jpg" alt="About">
+        <div class="about-image">
+          <img src="S__17326088.jpg" alt="About Me">
+        </div>
 
         <div class="about-text">
-
           <p>
-            I am currently a third-year Logistics student with a strong interest
-            in supply chain management, warehouse operations, and transportation systems.
-            I enjoy learning how logistics technology can improve efficiency and customer experience.
+            My name is Anantachai, a third-year Logistics student who is highly
+            interested in supply chain management, warehouse operations, and
+            digital business solutions. I enjoy combining analytical thinking
+            with creativity to solve real-world business challenges.
           </p>
 
           <p>
-            Throughout my studies, I have worked on logistics dashboards,
-            delivery tracking concepts, and warehouse management analysis.
-            I enjoy combining creativity with analytical thinking to solve problems effectively.
+            Beyond academics, I love exploring branding, minimalist design, and
+            storytelling through presentations and digital experiences. I believe
+            logistics is not only about movement but also about delivering value
+            and creating seamless customer experiences.
           </p>
 
           <p>
-            My goal is to become a logistics professional who can contribute
-            innovative ideas and operational solutions in the logistics industry.
+            I am currently developing my skills in logistics systems, project
+            management, and business communication while building a portfolio
+            that reflects both professionalism and creativity.
           </p>
-
         </div>
 
       </div>
-
     </div>
-
   </section>
 
   <!-- PROJECTS -->
-
-  <section id="projects">
-
+  <section class="projects" id="projects">
     <div class="container">
 
-      <div class="section-title">
-        <h2>Projects</h2>
-      </div>
+      <h2>Projects</h2>
 
-      <div class="projects-grid">
+      <div class="project-grid">
 
-        <!-- PROJECT 1 -->
-
+        <!-- Project 1 -->
         <div class="project-card">
+          <img src="photo 1.jpg" alt="Logistics Dashboard">
 
-          <img src="photo 1.jpg" alt="Project 1">
-
-          <div class="project-content">
-
-            <h3>Logistics Tracking Dashboard</h3>
+          <div class="project-info">
+            <h3>Logistics Dashboard Design</h3>
 
             <p>
-              Designed a shipment tracking dashboard concept for monitoring
-              logistics operations, fleet movement, and delivery performance in real time.
+              Designed a modern logistics dashboard UI focusing on shipment
+              tracking, fleet monitoring, and warehouse analytics with a clean
+              minimalist interface.
             </p>
-
           </div>
-
         </div>
 
-        <!-- PROJECT 2 -->
-
+        <!-- Project 2 -->
         <div class="project-card">
+          <img src="photo 2.jpg" alt="Delivery Application">
 
-          <img src="photo 2.jpg" alt="Project 2">
-
-          <div class="project-content">
-
-            <h3>Delivery Mobile Interface</h3>
+          <div class="project-info">
+            <h3>Smart Delivery Experience</h3>
 
             <p>
-              Developed a delivery application interface focused on customer convenience,
-              shipment tracking, and route optimization.
+              Developed a concept for a delivery tracking experience that
+              improves customer convenience through real-time location tracking
+              and optimized delivery management.
             </p>
-
           </div>
-
         </div>
 
-        <!-- PROJECT 3 -->
-
+        <!-- Project 3 -->
         <div class="project-card">
+          <img src="photo 3.jpg" alt="Warehouse Management">
 
-          <img src="photo 3.jpg" alt="Project 3">
-
-          <div class="project-content">
-
-            <h3>Warehouse Management System</h3>
+          <div class="project-info">
+            <h3>Warehouse Management Analysis</h3>
 
             <p>
-              Created a warehouse management analysis project presenting inventory flow,
-              workforce efficiency, and operational performance insights.
+              Conducted research and visualization for warehouse performance
+              metrics including inventory flow, labor efficiency, and operational
+              cost management.
             </p>
-
           </div>
-
         </div>
 
       </div>
-
     </div>
-
   </section>
 
   <!-- SKILLS -->
-
-  <section id="skills">
-
+  <section class="skills" id="skills">
     <div class="container">
 
-      <div class="section-title">
-        <h2>Skills</h2>
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+
+        <div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Supply Chain Management</span>
+              <span>90%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:90%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Warehouse Management</span>
+              <span>85%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:85%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Presentation Design</span>
+              <span>92%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:92%"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Data Analysis</span>
+              <span>80%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:80%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Brand Storytelling</span>
+              <span>88%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:88%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-title">
+              <span>Team Collaboration</span>
+              <span>95%</span>
+            </div>
+
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:95%"></div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-
-      <div class="skills">
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Supply Chain Management</span>
-            <span>90%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:90%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Warehouse Management</span>
-            <span>85%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:85%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Logistics Planning</span>
-            <span>88%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:88%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Microsoft Excel</span>
-            <span>92%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:92%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Data Analysis</span>
-            <span>80%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:80%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-title">
-            <span>Presentation Design</span>
-            <span>87%</span>
-          </div>
-
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:87%"></div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-
   </section>
 
   <!-- CONTACT -->
-
-  <section id="contact">
-
+  <section class="contact" id="contact">
     <div class="container">
 
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
+      <h2>Contact Me</h2>
 
-      <div class="contact-box">
+      <p>
+        Feel free to connect with me for collaboration, projects,
+        or creative opportunities.
+      </p>
 
-        <p>📧 Email: anantachai@email.com</p>
+      <div class="contact-links">
+        <a href="mailto:anantachai@email.com">
+          Email
+        </a>
 
-        <p>
-          💼 LinkedIn:
-          <a href="#">linkedin.com/in/anantachai</a>
-        </p>
+        <a href="#">
+          LinkedIn
+        </a>
 
-        <p>
-          📸 Instagram:
-          <a href="#">@anantachai</a>
-        </p>
-
+        <a href="#">
+          Instagram
+        </a>
       </div>
 
     </div>
-
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-    <p>© 2026 Anantachai Portfolio. All Rights Reserved.</p>
+    © 2026 Anantachai Portfolio. All Rights Reserved.
   </footer>
 
 </body>
