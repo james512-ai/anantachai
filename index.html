@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nut Studio | Creative Digital Agency</title>
+  <title>Anantachai | Portfolio</title>
 
   <style>
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior:smooth;
     }
 
     body{
-      background:#f7f9fc;
+      font-family: "Poppins", sans-serif;
+      background:#ffffff;
       color:#222;
-      line-height:1.6;
-    }
-
-    header{
-      width:100%;
-      background:#0f172a;
-      color:white;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      line-height:1.7;
     }
 
     .container{
@@ -36,176 +26,253 @@
       margin:auto;
     }
 
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 0;
-    }
-
-    .logo{
-      font-size:24px;
-      font-weight:bold;
-      color:#38bdf8;
-    }
-
-    nav ul{
-      display:flex;
-      list-style:none;
-      gap:24px;
-    }
-
-    nav ul li a{
-      color:white;
-      text-decoration:none;
-      transition:0.3s;
-    }
-
-    nav ul li a:hover{
-      color:#38bdf8;
-    }
-
-    .hero{
-      height:100vh;
-      background:linear-gradient(to right,#0f172a,#1e3a8a);
-      display:flex;
-      align-items:center;
-      color:white;
-      padding-top:80px;
-    }
-
-    .hero-content{
-      max-width:650px;
-    }
-
-    .hero h1{
-      font-size:56px;
-      margin-bottom:20px;
-      line-height:1.2;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:30px;
-      color:#dbeafe;
-    }
-
-    .btn{
-      display:inline-block;
-      background:#38bdf8;
-      color:#0f172a;
-      padding:14px 28px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:white;
-      transform:translateY(-2px);
-    }
-
     section{
       padding:90px 0;
     }
 
-    .section-title{
-      text-align:center;
-      margin-bottom:50px;
+    h1,h2,h3{
+      color:#5b21b6;
     }
 
-    .section-title h2{
-      font-size:38px;
-      color:#0f172a;
-      margin-bottom:10px;
+    p{
+      color:#555;
     }
 
-    .section-title p{
-      color:#666;
-    }
-
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-    }
-
-    .card{
+    /* NAVBAR */
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
       background:white;
-      padding:30px;
-      border-radius:16px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
+      border-bottom:1px solid #eee;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      color:#5b21b6;
+    }
+
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
       transition:0.3s;
     }
 
-    .card:hover{
-      transform:translateY(-6px);
+    nav ul li a:hover{
+      color:#7c3aed;
     }
 
-    .card h3{
-      margin-bottom:15px;
-      color:#1e3a8a;
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:linear-gradient(to bottom right,#ffffff,#f3e8ff);
+      padding-top:100px;
     }
 
+    .hero-content{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:64px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text h3{
+      font-size:22px;
+      font-weight:500;
+      margin-bottom:25px;
+      color:#7c3aed;
+    }
+
+    .hero-text p{
+      margin-bottom:30px;
+      font-size:17px;
+      max-width:500px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#7c3aed;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      background:#5b21b6;
+      transform:translateY(-3px);
+    }
+
+    .hero-image img{
+      width:100%;
+      border-radius:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* SECTION TITLE */
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    /* ABOUT */
     .about{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:40px;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
       align-items:center;
     }
 
     .about img{
       width:100%;
       border-radius:20px;
-    }
-
-    .about-text h2{
-      font-size:40px;
-      margin-bottom:20px;
-      color:#0f172a;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
     }
 
     .about-text p{
-      color:#555;
-      margin-bottom:16px;
+      margin-bottom:20px;
+      font-size:16px;
     }
 
-    .contact-box{
+    /* PROJECTS */
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
       background:white;
-      padding:40px;
-      border-radius:18px;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .project-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:25px;
+    }
+
+    .project-content h3{
+      margin-bottom:12px;
+    }
+
+    /* SKILLS */
+    .skills{
+      max-width:800px;
+      margin:auto;
+    }
+
+    .skill{
+      margin-bottom:28px;
+    }
+
+    .skill-title{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:8px;
+      font-weight:600;
+    }
+
+    .skill-bar{
+      width:100%;
+      height:12px;
+      background:#eee;
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    .skill-fill{
+      height:100%;
+      background:linear-gradient(to right,#7c3aed,#c084fc);
+      border-radius:20px;
+    }
+
+    /* CONTACT */
+    .contact-box{
       max-width:700px;
       margin:auto;
-      box-shadow:0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .contact-box h3{
-      margin-bottom:20px;
-      color:#1e3a8a;
+      background:#faf5ff;
+      padding:50px;
+      border-radius:24px;
+      text-align:center;
     }
 
     .contact-box p{
-      margin-bottom:10px;
-      color:#555;
+      margin-bottom:15px;
+      font-size:18px;
     }
 
+    .contact-box a{
+      color:#7c3aed;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* FOOTER */
     footer{
-      background:#0f172a;
-      color:white;
       text-align:center;
-      padding:24px 0;
-      margin-top:60px;
+      padding:30px 0;
+      border-top:1px solid #eee;
+      color:#777;
     }
 
-    @media(max-width:768px){
+    /* RESPONSIVE */
+    @media(max-width:900px){
 
-      .hero h1{
-        font-size:40px;
+      .hero-content,
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:48px;
       }
 
       nav ul{
-        gap:14px;
+        gap:15px;
       }
 
     }
@@ -215,78 +282,46 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
-        <div class="logo">Nut Studio</div>
+        <div class="logo">Anantachai</div>
 
         <ul>
-          <li><a href="#home">หน้าแรก</a></li>
-          <li><a href="#services">บริการ</a></li>
-          <li><a href="#about">เกี่ยวกับ</a></li>
-          <li><a href="#contact">ติดต่อ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
+  <!-- HERO -->
+  <section class="hero">
     <div class="container">
+
       <div class="hero-content">
-        <h1>สร้างแบรนด์ของคุณ ให้โดดเด่นบนโลกดิจิทัล</h1>
 
-        <p>
-          Creative Digital Agency สำหรับธุรกิจยุคใหม่
-          ออกแบบเว็บไซต์ สร้างคอนเทนต์ และพัฒนาภาพลักษณ์แบรนด์อย่างมืออาชีพ
-        </p>
+        <div class="hero-text">
+          <h1>Anantachai</h1>
 
-        <a href="#contact" class="btn">เริ่มต้นโปรเจกต์</a>
-      </div>
-    </div>
-  </section>
+          <h3>
+            Marketing student passionate about brand storytelling
+          </h3>
 
-  <!-- FEATURES -->
-  <section id="services">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>บริการของเรา</h2>
-        <p>ครบจบสำหรับธุรกิจออนไลน์ยุคใหม่</p>
-      </div>
-
-      <div class="features">
-
-        <div class="card">
-          <h3>Website Design</h3>
           <p>
-            ออกแบบเว็บไซต์ทันสมัย รองรับทุกอุปกรณ์
-            เพิ่มความน่าเชื่อถือให้ธุรกิจของคุณ
+            Third-year Logistics student with an interest in supply chain management,
+            warehouse systems, and digital logistics solutions. Passionate about
+            creating organized systems and improving operational efficiency.
           </p>
+
+          <a href="#projects" class="btn">View Projects</a>
         </div>
 
-        <div class="card">
-          <h3>Brand Identity</h3>
-          <p>
-            สร้างภาพลักษณ์แบรนด์ โลโก้ และโทนการสื่อสาร
-            ให้จดจำง่ายและโดดเด่น
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Social Media</h3>
-          <p>
-            ดูแลคอนเทนต์ Facebook, Instagram และ TikTok
-            เพื่อเพิ่มยอดเข้าถึงลูกค้า
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>SEO Marketing</h3>
-          <p>
-            เพิ่มโอกาสให้เว็บไซต์ติดอันดับ Google
-            และเข้าถึงลูกค้าใหม่ได้มากขึ้น
-          </p>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="profile">
         </div>
 
       </div>
@@ -298,24 +333,170 @@
   <section id="about">
     <div class="container">
 
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+
       <div class="about">
 
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="team"/>
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="about">
 
         <div class="about-text">
-          <h2>เกี่ยวกับเรา</h2>
 
           <p>
-            Nut Studio คือทีม Creative Agency ที่ช่วยธุรกิจเติบโตบนโลกออนไลน์
-            ด้วยงานออกแบบที่ทันสมัยและกลยุทธ์การตลาดที่เข้าใจผู้บริโภคยุคใหม่
+            I am a third-year Logistics student who enjoys learning about
+            transportation systems, warehouse management, and modern supply chain
+            technology. I am especially interested in how logistics can improve
+            customer experiences and business performance.
           </p>
 
           <p>
-            เราเชื่อว่าการออกแบบที่ดี ไม่ใช่แค่สวยงาม
-            แต่ต้องช่วยสร้างผลลัพธ์ทางธุรกิจได้จริง
+            During my studies, I have explored dashboard design, warehouse management
+            systems, and shipment tracking solutions. I enjoy combining analytical
+            thinking with creativity to solve operational challenges.
           </p>
 
-          <a href="#contact" class="btn">พูดคุยกับเรา</a>
+          <p>
+            My goal is to grow into a logistics professional who can contribute
+            innovative ideas and efficient solutions in the logistics and supply
+            chain industry.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <div class="project-content">
+            <h3>Logistics Tracking Dashboard</h3>
+
+            <p>
+              Designed a shipment tracking dashboard concept for monitoring fleet
+              movement, delivery status, and logistics performance in real time.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <div class="project-content">
+            <h3>Delivery Mobile Interface</h3>
+
+            <p>
+              Created a delivery application interface focused on route tracking,
+              customer convenience, and faster communication between drivers and users.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="project">
+
+          <div class="project-content">
+            <h3>Warehouse Management Analysis</h3>
+
+            <p>
+              Developed a warehouse management presentation analyzing operational
+              efficiency, inventory flow, and workforce productivity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Supply Chain Management</span>
+            <span>90%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Warehouse Management</span>
+            <span>85%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Logistics Planning</span>
+            <span>88%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Microsoft Excel</span>
+            <span>92%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Data Analysis</span>
+            <span>80%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:80%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Presentation Design</span>
+            <span>87%</span>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:87%"></div>
+          </div>
         </div>
 
       </div>
@@ -328,17 +509,23 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>ติดต่อเรา</h2>
-        <p>พร้อมเริ่มต้นโปรเจกต์ใหม่กับคุณ</p>
+        <h2>Contact</h2>
       </div>
 
       <div class="contact-box">
-        <h3>Nut Studio</h3>
 
-        <p>📍 กรุงเทพ ประเทศไทย</p>
-        <p>📞 099-999-9999</p>
-        <p>📧 contact@nutstudio.com</p>
-        <p>🌐 www.nutstudio.com</p>
+        <p>📧 Email: anantachai@email.com</p>
+
+        <p>
+          💼 LinkedIn:
+          <a href="#">linkedin.com/in/anantachai</a>
+        </p>
+
+        <p>
+          📸 Instagram:
+          <a href="#">@anantachai</a>
+        </p>
+
       </div>
 
     </div>
@@ -346,7 +533,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Nut Studio. All Rights Reserved.</p>
+    <p>© 2026 Anantachai Portfolio. All Rights Reserved.</p>
   </footer>
 
 </body>
